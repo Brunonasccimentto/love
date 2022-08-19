@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+	<link rel="stylesheet" href="style.css">
+	
+		
+</head>
+<body>
+	
+	<div id="canvas-shapes"></div>
+<div class="content">
+		
+		<div class="container">
+			<h1>Calculadora do amor</h1>
+			<h3>Digite o primeiro nome</h3>
+			<h3>Digite o segundo nome</h3>
+
+		<div id="inputs">
+			<input id="fname" type="text" placeholder="nome">
+			<input id="sname" type="text" placeholder="nome">
+
+		</div>
+
+		<button id="enviar">Enviar</button>
+
+
+		<div class="results">
+			<div class="match">
+				<h3 id="casal1"> </h3>
+				<img src="./coracao.png">
+				<h3 id="casal2"> </h3>
+			</div>
+			<span class="spanout">Porcentagem: <span class="resp"></span> </span>
+			<span class="spanout">Resultado: <span class="resp"></span> </span>
+		</div>
+		
+		
+	</div>
+	
+	
+		
+</div>  
+
+</body>
+
+<script src="script.js"></script>
+
+<script>
+	const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'fd69c01475mshd7e920f5811189cp1cca0cjsn2932aed4c658',
+		'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
+	}
+};
+
+		let fnameInput = document.getElementById("fname")
+		let snameInput = document.getElementById("sname")
+		let porcent = document.getElementsByClassName("resp")[0]
+		let resp = document.getElementsByClassName("resp")[1]
+		let enviar = document.getElementById("enviar")
+		let casal1 = document.getElementById("casal1")
+		let casal2 = document.getElementById("casal2")
+
+		function show(){
+			let results = document.getElementsByClassName("results")[0]
+			results.style.display = "block"
+		}
+
+		enviar.addEventListener("click", ()=>{
+			fetch(`https://love-calculator.p.rapidapi.com/getPercentage?sname=${sname.value}&fname=${fname.value}`, options)
+			.then(response => response.json())
+			.then(response => {
+		
+			casal1.innerText = fnameInput.value
+			casal2.innerText = snameInput.value
+			porcent.innerText = " " + response.percentage + "%"
+			resp.innerText = " " + response.result
+
+			show()
+
+			})
+			.catch(err => console.error(err));
+		})
+
+		
+		
+</script>
+
+
+</html>
