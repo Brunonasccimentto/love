@@ -172,7 +172,7 @@ var canvasShape = function(block_id, params) {
 canvasShape('canvas-shapes', {
   size: 15,  // Change Elements Size 
   speed: 1, // Change Elements Speed
-  number_of_item:250,  // Max Limit Of Iteam 250
+  number_of_item: 50,  // Max Limit Of Iteam 250
   shape: "heart",  //You Can Change With "circle" , "square" , "triangle", "hexa"
   color: "#88001b",  // Change Elements Color
   // image: "http://petitrocher.camp-atlantique.com/sites/default/files/styles/icone_titre_home_25_25/public/icone_smile_soleil_134.png
