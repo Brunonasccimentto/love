@@ -1,2 +1,3 @@
 # love
-Aprendendo a utilizar fetch
+Utilizando fetch em uma aplicação simples de entretenimento.
+
