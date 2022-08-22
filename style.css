@@ -95,9 +95,107 @@ img{
 
 @media screen and (max-width: 600px) {
     .container{
-      width: 80%;
+      width: 95%;
+      padding: 50px;
     }
     .content{
       left: 0%;
+      width: 400px;
+    }
+    h3{
+      font-size: 14px;
+      margin: 15px;
+    }
+
+    #inputs{
+      margin: 10px;
+    }
+    #fname{
+      margin-right: 10px;
+    }
+    #sname{
+      margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+      width: 70vw;
+      padding: 30px;
+    }
+    .content{
+      margin: auto;
+      width: 60vw;
+      left: 25px;
+    }
+
+    h1{
+      font-size:26px;
+      margin-bottom:10px;
+      text-shadow: 1px 2px 3px  #000;
+    }
+
+    h3{
+      font-size: 14px;
+      
+    }
+    .dpns{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 2px 3px  #000;
+    }
+
+    #dpn1{
+     font-size: 12.3px;
+
+    }
+
+    #dpn2{
+      font-size: 12.3px;
+      
+    }
+
+    input{
+      height: 20px;
+      width: 120px;
+      border-radius: 10px;
+    }
+
+    #fname{
+      margin-right: 5px;
+    }
+    #sname{
+      margin-left: 5px;
+    }
+
+    .results{
+      margin-top: 20px;
+      display: none;
+      font-size: 14px;
+    }
+    .match{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+    }
+    .spanout{
+      display: flex;
+      justify-content: start;
+      background-color: rgba(0, 0, 0, 0.719);
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 10px;
+      color: rgb(219, 215, 215);;
+    }
+    
+    .resp{
+      margin-left: 10px;
+    }
+    
+    img{
+      width: 30px;
+      height: 30px;
     }
 }

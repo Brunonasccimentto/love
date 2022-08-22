@@ -85,10 +85,14 @@ var canvasShape = function(block_id, params) {
     //Ading two methods
     Particle.prototype.Draw = function(ctx) {
         ctx.fillStyle = this.Color;
-        if (ballShape == 'circle') {
+        if (ballShape == 'heart') {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, radius_ball, 0, 2 * Math.PI, false);
+            ctx.arc(this.x, this.y, radius_ball, 0, 2 * Math.PI, false)
+            ctx.arc(this.x + 20, this.y, radius_ball, 0, 2 * Math.PI, false);
             ctx.fill();
+            ctx.beginPath()
+            ctx.moveTo(this.x +10, this.y +35), ctx.lineTo(this.x +20 + radius_ball -4, this.y -15  + radius_ball +10), ctx.lineTo(this.x -26 + radius_ball, this.y +30 - radius_ball -5), ctx.closePath(), ctx.fill()
+            ctx.fill()
         } else if (ballShape == 'square') {
             ctx.fillRect(this.x, this.y, radius_ball, radius_ball);
         } else if (ballShape == "triangle") {
@@ -167,9 +171,9 @@ var canvasShape = function(block_id, params) {
 // // Customization
 canvasShape('canvas-shapes', {
   size: 15,  // Change Elements Size 
-  speed: 2, // Change Elements Speed
-  number_of_item:600,  // Max Limit Of Iteam 250
-  shape: "circle",  //You Can Change With "circle" , "square" , "triangle", "hexa"
+  speed: 1, // Change Elements Speed
+  number_of_item:250,  // Max Limit Of Iteam 250
+  shape: "heart",  //You Can Change With "circle" , "square" , "triangle", "hexa"
   color: "#88001b",  // Change Elements Color
   // image: "http://petitrocher.camp-atlantique.com/sites/default/files/styles/icone_titre_home_25_25/public/icone_smile_soleil_134.png
 });
