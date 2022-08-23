@@ -28,8 +28,8 @@ h2{
 
 .container{
     max-width: 800px;
-    background-color: rgba(173, 173, 173, 0.705);
-    box-shadow: 2px 2px 2px rgb(97, 97, 97);
+    background-color: #1f1a50be;
+    box-shadow: 2px 2px 2px rgb(24, 24, 24);
     padding: 50px;
     text-align: center;
     border-radius: 20px;
